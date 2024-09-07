@@ -33,6 +33,20 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/task18_app.js"></script>
+	<script>
+		const inputNum = document.getElementById("inputNum");
+		const btn = document.getElementById("btn");
+
+		const check = () => {
+			let num = inputNum.value;
+			if(num >= 50 && num <= 100){
+				alert(`${num} is between 50-100`);
+			}else{
+				alert(`${num} is not between 50-100`);
+			}
+		}
+
+		btn.addEventListener("click", check);
+	</script>
 </body>
 </html>
