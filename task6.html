@@ -40,6 +40,21 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/task6.app.js"></script>
+	<script>
+	
+		const fname = document.getElementById("fname");
+		const lname = document.getElementById("lname");
+		const birthyear = document.getElementById("birthYear");
+		const btn = document.getElementById("btn");
+
+		const age = (e) => {
+			let age = new Date().getFullYear() - parseInt(birthyear.value);
+			alert(`Age of ${fname.value} ${lname.value} is ${age}`)
+
+		}
+
+
+		btn.addEventListener("click", age);
+	</script>
 </body>
 </html>

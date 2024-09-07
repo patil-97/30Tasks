@@ -1,35 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-	<title>JS Task 14</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
-</head>
-<body>
-	<div class="container" id="task14">
-		<div class="row">
-			<div class="col-sm-12">
-				<a href='index.html' class="my-2 d-inline-block"><i class='fa fa-arrow-left mr-2'></i>Task List</a>
-				<div class="card p-3 mb-4">
-					<h4>Task 14 - Parameter and arguments</h4>	
-					<ul class="mb-0">
-						<li>Create function which accepts 2 parameters "Number 1" and "Number 2"</li>
-						<li>Execute the function on click of button and show sum of "Number 1" and "Number 2"</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<form class="form-inline">
-					<button type="button" class="btn btn-primary btn-lg">Show sum</button>
-				</form>
-			</div>
-		</div>
-	</div>
-	<script src="js/task14_app.js"></script>
-</body>
+  <head>
+    <title>JS Task 14</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container" id="task14">
+      <div class="row">
+        <div class="col-sm-12">
+          <a href="index.html" class="my-2 d-inline-block"
+            ><i class="fa fa-arrow-left mr-2"></i>Task List</a
+          >
+          <div class="card p-3 mb-4">
+            <h4>Task 14 - Parameter and arguments</h4>
+            <ul class="mb-0">
+              <li>
+                Create function which accepts 2 parameters "Number 1" and
+                "Number 2"
+              </li>
+              <li>
+                Execute the function on click of button and show sum of "Number
+                1" and "Number 2"
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <form class="form-inline">
+            <input
+              type="text"
+              id="num1"
+              class="form-control"
+              placeholder="Number 1"
+            /><span class="px-5" style="font-size: 54px">+</span>
+            <input
+              type="text"
+              class="mx-2 form-control"
+              id="num2"
+              placeholder="Number 2"
+            />
+            <button type="button" class="mx-4 btn btn-primary btn-lg" id="btn">
+              Show sum
+            </button>
+            <h1 id="ans" style="font-size: 54px; font-weight: bold"></h1>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const btn = document.getElementById("btn");
+      const num1 = document.getElementById("num1");
+      const num2 = document.getElementById("num2");
+      const ans = document.getElementById("ans");
+
+		const addNum = (number1, number2) => {
+			return result = number1 + number2;
+		}
+		
+      const sum = () => {
+		let nums1 = parseInt(num1.value);
+		let nums2 = parseInt(num2.value);
+		ans.innerHTML = addNum(nums1, nums2);
+	  };
+
+      btn.addEventListener("click", sum);
+    </script>
+  </body>
 </html>

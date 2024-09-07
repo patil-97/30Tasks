@@ -34,6 +34,15 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/task8_app.js"></script>
+	<script>
+		const inputCap = document.getElementById("inputCap");
+		const btn = document.getElementById("btn");
+
+		const capital = () => {
+			alert(inputCap.value.toUpperCase());				
+		}
+
+		btn.addEventListener("click", capital);
+	</script>
 </body>
 </html>
