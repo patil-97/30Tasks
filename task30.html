@@ -26,8 +26,10 @@
 	</div>
 	<script>
 		let str = "poTAtO".split("");
-		let answer = str.sort().join("");
-		console.log(answer);
+		let upper = str.filter(c => c === c.toUpperCase());
+		let lower = str.filter(c => c === c.toLowerCase());
+		let result = upper.join("") + lower.join("");
+		console.log(result);
 
 	</script>
 </body>
